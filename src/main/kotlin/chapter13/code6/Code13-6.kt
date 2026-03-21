@@ -8,7 +8,7 @@ import kotlinx.coroutines.runBlocking
 fun searchCoroutinesBookPrice(bookstore: String): Flow<Int> {
   return flow {
     delay(1000L)
-    println("[${Thread.currentThread().name}] $bookstore 가격이 반환됩니다")
+    println("[${Thread.currentThread().name}] ${bookstore}의 가격이 방출됩니다")
     when (bookstore) {
       "A서점" -> {
         emit(35000)

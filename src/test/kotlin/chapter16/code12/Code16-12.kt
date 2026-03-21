@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test
 
 class TurbineTest {
   @Test
-  fun `awaitItem이 원소를 반환하지 못해 실패하는 테스트`() = runTest {
+  fun `awaitItem이 호출됐지만 원소 방출 이벤트가 없어서 실패하는 테스트`() = runTest {
     flow {
       for (number in 1..3) {
         emit(number)

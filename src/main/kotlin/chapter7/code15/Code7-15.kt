@@ -9,7 +9,7 @@ fun main() = runBlocking<Unit> {
   val numberFlow: Flow<Int> = flow {
     emit(1) // 허용
     coroutineScope {
-      // runBlocking 코루틴에서 실행됨
+      // 실행 컨텍스트가 바뀌지 않기 때문에 허용
       emit(2)
     }
   }
