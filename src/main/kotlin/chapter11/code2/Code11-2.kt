@@ -9,7 +9,7 @@ import kotlinx.coroutines.runBlocking
 fun main() = runBlocking<Unit> {
   val startTime = System.currentTimeMillis()
   val numberFlow = flow {
-    for (number in 1..1000000000) {
+    for (number in 1..3) {
       println("[${getElapsedTime(startTime)}] $number 생성 시작")
       println("[${getElapsedTime(startTime)}] $number 생성 완료")
       emit(number)
