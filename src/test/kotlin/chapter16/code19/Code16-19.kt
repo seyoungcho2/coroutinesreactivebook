@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test
 
 class TurbineTest {
   @Test
-  fun `turbineScope과 testIn 사용해 테스트 구성하기`() = runTest {
+  fun `turbineScope와 testIn 사용해 테스트 구성하기`() = runTest {
     turbineScope {
       val turbine: ReceiveTurbine<String> = flowOf("원소").testIn(backgroundScope)
       assertEquals("원소", turbine.awaitItem())
