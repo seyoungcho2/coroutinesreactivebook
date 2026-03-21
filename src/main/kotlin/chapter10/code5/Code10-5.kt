@@ -22,9 +22,9 @@ fun main() = runBlocking<Unit> {
     throw e
   } finally {
     if (cause == null) { // cause가 null일 경우의 동작
-      println("Flow 수집이 완료 되었습니다")
+      println("Flow 수집이 완료됐습니다")
     } else { // cause가 null이 아닐 경우의 동작
-      println("[${cause}] Flow 수집이 취소 되었습니다")
+      println("[${cause}] Flow 수집이 취소됐습니다")
     }
   }
 }
