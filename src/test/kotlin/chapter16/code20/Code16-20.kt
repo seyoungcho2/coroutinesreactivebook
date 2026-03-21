@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test
 
 class TurbineTest {
   @Test
-  fun `turbineScope를 사용하지 않고 testIn 함수 호출시 예외가 발생한다`() = runTest {
+  fun `turbineScope를 사용하지 않고 testIn 함수 호출 시 예외가 발생한다`() = runTest {
     val turbine: ReceiveTurbine<String> = flowOf("원소").testIn(backgroundScope)
     assertEquals("원소", turbine.awaitItem())
     turbine.awaitComplete()
